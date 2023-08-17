@@ -1,0 +1,6 @@
+@use '../../styles/variables' as v;
+
+header {
+  background-color: v.$principale;
+  color: v.$claire;
+}

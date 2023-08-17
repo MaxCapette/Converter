@@ -1,0 +1,26 @@
+@use '../../styles/variables' as v;
+
+.scrollLi {
+  height: 40vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+li {
+  animation-duration: 1s;
+  list-style: none;
+  color: v.$principale;
+  border-bottom: solid 1px v.$principale;
+  padding: 5px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  h2 {
+    color: v.$principale;
+  }
+}
+
+li:hover {
+  background-color: v.$alternative;
+}
