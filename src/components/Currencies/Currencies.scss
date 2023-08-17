@@ -11,8 +11,9 @@ li {
   list-style: none;
   color: v.$principale;
   border-bottom: solid 1px v.$principale;
-  padding: 5px;
+  padding: 5px 10px;
   text-align: left;
+  font-size: large;
 }
 ul {
   margin: 0;
@@ -21,8 +22,9 @@ ul {
 h2 {
   color: v.$principale;
   text-align: left;
-  padding: 5px;
+  padding: 10px;
   border-bottom: solid 1px v.$principale;
+  font-size: large;
 }
 li:hover {
   background-color: v.$alternative;

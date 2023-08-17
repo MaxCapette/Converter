@@ -3,11 +3,15 @@
 
 import './Header.scss';
 
-function Header() {
+interface HeaderProps {
+  amount: number;
+}
+
+function Header({ amount }: HeaderProps) {
   return (
     <header className="Header">
       <h1 className="Header_title">Converter</h1>
-      <span>1 euro</span>
+      <span>{amount}€</span>
     </header>
   );
 }

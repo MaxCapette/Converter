@@ -1,10 +1,14 @@
 import './Amount.scss';
 
-function Amount() {
+interface AmountProps {
+  currencyName: string;
+  amountDollard: number;
+}
+function Amount({ currencyName, amountDollard }: AmountProps) {
   return (
     <div className="result">
-      <p>1.09</p>
-      <p>Unites States Dollars</p>
+      <p>{amountDollard}</p>
+      <p>{currencyName}</p>
     </div>
   );
 }

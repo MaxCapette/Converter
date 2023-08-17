@@ -3,5 +3,8 @@
 header {
   background-color: v.$principale;
   color: v.$claire;
-  padding: 20px;
+  padding: 25px;
+  span {
+    font-size: larger;
+  }
 }
