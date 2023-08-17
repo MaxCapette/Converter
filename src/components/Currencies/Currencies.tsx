@@ -5,11 +5,10 @@ interface ICurrency {
   code: string;
   rate: number;
 }
-interface ListProps {
-  currencies: string[];
+interface LiCurrency {
+  currencies: ICurrency[];
 }
-
-function Currencies({ currencies }: ICurrency) {
+function Currencies({ currencies }: LiCurrency) {
   const currencyList = currencies.map((currency) => {
     return <li key={currency.description}>{currency.description}</li>;
   });
