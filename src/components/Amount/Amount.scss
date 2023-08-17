@@ -1,0 +1,8 @@
+@use '../../styles/variables' as v;
+
+.result p {
+  color: v.$principale;
+}
+.result :first-child {
+  font-size: 50px;
+}

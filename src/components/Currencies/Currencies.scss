@@ -12,15 +12,18 @@ li {
   color: v.$principale;
   border-bottom: solid 1px v.$principale;
   padding: 5px;
+  text-align: left;
 }
 ul {
   margin: 0;
   padding: 0;
-  h2 {
-    color: v.$principale;
-  }
 }
-
+h2 {
+  color: v.$principale;
+  text-align: left;
+  padding: 5px;
+  border-bottom: solid 1px v.$principale;
+}
 li:hover {
   background-color: v.$alternative;
 }

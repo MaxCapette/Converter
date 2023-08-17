@@ -1,9 +1,11 @@
+import './Amount.scss';
+
 function Amount() {
   return (
-    <footer className="Amount">
-      <span>1.09</span>
-      <span>United States Dollar</span>
-    </footer>
+    <div className="result">
+      <p>1.09</p>
+      <p>Unites States Dollars</p>
+    </div>
   );
 }
 export default Amount;
