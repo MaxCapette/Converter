@@ -8,7 +8,7 @@ interface IAmountProps {
 function Amount({ result, currentCurrency }: IAmountProps) {
   return (
     <section className="amount">
-      <p className="amount-value">{result}</p>
+      <p className="amount-value">{result.toFixed(2)}</p>
       <p className="amount-currency">{currentCurrency.description}</p>
     </section>
   );

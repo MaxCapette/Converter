@@ -11,6 +11,16 @@ function Header({ amount }: IHeaderProps) {
   return (
     <header className="Header">
       <h1 className="Header-title">Converter</h1>
+      {/* <input
+        type="text"
+        onChange={(event) => {
+          const newValue = Number(event.target.value);
+          if (!Number.isNaN(newValue)) {
+            setInput(newValue);
+          }
+        }}
+        value={amount}
+      /> */}
       <span>{amount}€</span>
     </header>
   );

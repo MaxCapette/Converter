@@ -11,7 +11,10 @@ import currencies from '../../data/currencies';
 function Converter() {
   const [isCurrenciesVisible, setIsCurrenciesVisible] = useState(true);
   const [nbClicks, setNbClicks] = useState(0);
-
+  const [currentCurrency, setCurrentCurrency] = useState(currencies[0]);
+  const makeConversion = () => {
+    return nbClicks * currentCurrency.rate;
+  };
   return (
     <div className="Converter">
       <Header amount={nbClicks} />
@@ -19,8 +22,13 @@ function Converter() {
         isCurrenciesVisible={isCurrenciesVisible}
         setIsCurrenciesVisible={setIsCurrenciesVisible}
       />
-      {isCurrenciesVisible && <Currencies currencies={currencies} />}
-      <Amount result={1.09} currentCurrency={currencies[0]} />
+      {isCurrenciesVisible && (
+        <Currencies
+          currencies={currencies}
+          setCurrentCurrency={setCurrentCurrency}
+        />
+      )}
+      <Amount result={makeConversion()} currentCurrency={currentCurrency} />
       <Footer nbClicks={nbClicks} setNbClicks={setNbClicks} />
     </div>
   );

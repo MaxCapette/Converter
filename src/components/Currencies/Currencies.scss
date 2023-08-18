@@ -6,7 +6,7 @@
   overflow-x: hidden;
 }
 
-li {
+.currencies-item {
   animation-duration: 1s;
   list-style: none;
   color: v.$mainColor;
@@ -14,7 +14,12 @@ li {
   padding: 5px 10px;
   text-align: left;
   font-size: large;
+  &:hover {
+    background-color: v.$altColor;
+    cursor: pointer;
+  }
 }
+
 ul {
   margin: 0;
   padding: 0;
@@ -25,10 +30,6 @@ h2 {
   padding: 10px;
   border-bottom: solid 1px v.$mainColor;
   font-size: large;
-}
-li:hover {
-  background-color: v.$altColor;
-  cursor: pointer;
 }
 
 .currencies-input {
