@@ -11,7 +11,7 @@ function Footer({ nbClicks, setNbClicks }: ICounterProps) {
 
   return (
     <div className="footer">
-      <input
+      {/* <input
         type="text"
         onChange={(event) => {
           const newValue = Number(event.target.value);
@@ -20,11 +20,11 @@ function Footer({ nbClicks, setNbClicks }: ICounterProps) {
           }
         }}
         value={nbClicks}
-      />
-      <div>{nbClicks} ❤️</div>
-      <button type="button" onClick={handleClick}>
-        +1
+      /> */}
+      <button className="button-love" type="button" onClick={handleClick}>
+        +1 ❤️
       </button>
+      <div className="like">{nbClicks} ❤️</div>
     </div>
   );
 }

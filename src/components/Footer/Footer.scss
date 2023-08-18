@@ -1,9 +1,41 @@
-@use '../../styles/variables' as vars;
+@use '../../styles/variables' as v;
 
 .footer {
   width: 100%;
-  background-color: vars.$mainColor;
+  background-color: v.$mainColor;
   padding: 1rem;
   display: flex;
   justify-content: space-around;
+}
+.button-love {
+  background-color: v.$lightColor; /* Une couleur rouge/rosé */
+  border: none;
+  color: v.$mainColor; /* Texte en blanc */
+  padding: 10px 10px; /* Espacement autour du texte */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 25px; /* Rend les coins du bouton arrondis */
+  cursor: pointer; /* Affiche le curseur en forme de main quand survolé */
+  transition: transform 0.3s; /* Effet de transition pour la pression du bouton */
+  &:hover {
+    background-color: v.$lightColor; /* Une couleur un peu plus claire pour le survol */
+  }
+  &:active {
+    transform: scale(
+      0.95
+    ); /* Réduit légèrement le bouton quand il est pressé */
+  }
+}
+.like {
+  background-color: v.$altColor; /* Une couleur rouge/rosé */
+  border: none;
+  color: v.$mainColor; /* Texte en blanc */
+  padding: 10px 10px; /* Espacement autour du texte */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 25px;
 }
