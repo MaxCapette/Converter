@@ -1,6 +1,6 @@
 interface ICounterProps {
   nbClicks: number;
-  setNbClicks: () => number;
+  setNbClicks: React.Dispatch<React.SetStateAction<number>>;
 }
 function Footer({ nbClicks, setNbClicks }: ICounterProps) {
   const handleClick = () => {

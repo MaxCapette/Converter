@@ -17,7 +17,7 @@ function Converter() {
 
   return (
     <div className="Converter">
-      <Header amount={1} />
+      <Header amount={nbClicks} />
       <button className="toggler" type="button" onClick={handleClick}>
         Hide currencies
       </button>
