@@ -3,14 +3,14 @@
 
 import './Header.scss';
 
-interface HeaderProps {
+interface IHeaderProps {
   amount: number;
 }
 
-function Header({ amount }: HeaderProps) {
+function Header({ amount }: IHeaderProps) {
   return (
     <header className="Header">
-      <h1 className="Header_title">Converter</h1>
+      <h1 className="Header-title">Converter</h1>
       <span>{amount}€</span>
     </header>
   );

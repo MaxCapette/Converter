@@ -1,6 +1,5 @@
-$color: #fff;
-$color-primary: #61dafb;
-$color-bg: #282c34;
+@use 'sass:color';
+
 $principale: #bb5432;
-$alternative: #f1c5b6;
-$claire: #fff;
+$alternative: color.scale($principale, $lightness: 70%);
+$claire: color.scale($principale, $lightness: 90%);
