@@ -30,6 +30,15 @@ li:hover {
   background-color: v.$altColor;
   cursor: pointer;
 }
+
+.currencies-input {
+  pad: 1rem;
+  width: 100%;
+  font-weight: bold;
+  color: v.$mainColor;
+  border: solid 1px v.$mainColor;
+}
+
 /* Partie horizontale */
 ::-webkit-scrollbar {
   height: 12px; /* Hauteur de la barre horizontale */
