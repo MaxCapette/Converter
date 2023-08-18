@@ -1,3 +1,5 @@
+import './Footer.scss';
+
 interface ICounterProps {
   nbClicks: number;
   setNbClicks: React.Dispatch<React.SetStateAction<number>>;
@@ -8,7 +10,7 @@ function Footer({ nbClicks, setNbClicks }: ICounterProps) {
   };
 
   return (
-    <div>
+    <div className="footer">
       <input
         type="text"
         onChange={(event) => {
@@ -19,7 +21,7 @@ function Footer({ nbClicks, setNbClicks }: ICounterProps) {
         }}
         value={nbClicks}
       />
-      <div>{nbClicks}</div>
+      <div>{nbClicks} ❤️</div>
       <button type="button" onClick={handleClick}>
         +1
       </button>

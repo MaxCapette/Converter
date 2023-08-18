@@ -1,0 +1,9 @@
+@use '../../styles/variables' as vars;
+
+.footer {
+  width: 100%;
+  background-color: vars.$mainColor;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}

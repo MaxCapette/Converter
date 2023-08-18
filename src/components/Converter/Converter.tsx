@@ -11,13 +11,14 @@ import currencies from '../../data/currencies';
 function Converter() {
   const [isCurrenciesVisible, setIsCurrenciesVisible] = useState(true);
   const [nbClicks, setNbClicks] = useState(0);
+  const [nbÌnput, setNbInput] = useState('');
   const [currentCurrency, setCurrentCurrency] = useState(currencies[0]);
   const makeConversion = () => {
-    return nbClicks * currentCurrency.rate;
+    return nbÌnput * currentCurrency.rate;
   };
   return (
     <div className="Converter">
-      <Header amount={nbClicks} />
+      <Header amount={nbÌnput} setNbInput={setNbInput} />
       <Toggler
         isCurrenciesVisible={isCurrenciesVisible}
         setIsCurrenciesVisible={setIsCurrenciesVisible}

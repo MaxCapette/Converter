@@ -5,23 +5,24 @@ import './Header.scss';
 
 interface IHeaderProps {
   amount: number;
+  setNbInput: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function Header({ amount }: IHeaderProps) {
+function Header({ amount, setNbInput }: IHeaderProps) {
   return (
     <header className="Header">
       <h1 className="Header-title">Converter</h1>
-      {/* <input
+      <input
         type="text"
         onChange={(event) => {
           const newValue = Number(event.target.value);
           if (!Number.isNaN(newValue)) {
-            setInput(newValue);
+            setNbInput(newValue);
           }
         }}
         value={amount}
-      /> */}
-      <span>{amount}€</span>
+        placeholder="Enter the amount"
+      />
     </header>
   );
 }
