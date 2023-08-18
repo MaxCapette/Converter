@@ -9,6 +9,7 @@ import currencies from '../../data/currencies';
 
 function Converter() {
   const [isCurrenciesVisible, setIsCurrenciesVisible] = useState(true);
+  const [nbClicks, setNbClicks] = useState(0);
 
   const handleClick = () => {
     setIsCurrenciesVisible(!isCurrenciesVisible);
@@ -22,7 +23,7 @@ function Converter() {
       </button>
       {isCurrenciesVisible && <Currencies currencies={currencies} />}
       <Amount result={1.09} currentCurrency={currencies[0]} />
-      <Footer />
+      <Footer nbClicks={nbClicks} setNbClicks={setNbClicks} />
     </div>
   );
 }

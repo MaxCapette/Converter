@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-
-function Footer() {
-  const [counter, setCounter] = useState(0);
-
+interface ICounterProps {
+  nbClicks: number;
+  setNbClicks: () => number;
+}
+function Footer({ nbClicks, setNbClicks }: ICounterProps) {
   const handleClick = () => {
-    setCounter(counter + 1);
+    setNbClicks(nbClicks + 1);
   };
   return (
     <div>
-      <div>{counter}</div>
+      <div>{nbClicks}</div>
       <button type="button" onClick={handleClick}>
         +1
       </button>
