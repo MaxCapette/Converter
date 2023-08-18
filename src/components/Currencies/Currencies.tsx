@@ -11,9 +11,11 @@ function Currencies({ currencies }: LiCurrency) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value);
   };
-  const filteredCurrencies = currencies.filter((currency) =>
-    currency.description.toLowerCase().includes(search.toLowerCase())
-  );
+
+  const getFilteredList = () =>
+    currencies.filter((currency) =>
+      currency.description.toLowerCase().includes(search.toLowerCase())
+    );
   return (
     <div className="scrollLi">
       <input
@@ -24,7 +26,7 @@ function Currencies({ currencies }: LiCurrency) {
         value={search}
       />
       <ul>
-        {filteredCurrencies.map((currency) => {
+        {getFilteredList().map((currency) => {
           return <li key={currency.code}>{currency.description}</li>;
         })}
       </ul>
