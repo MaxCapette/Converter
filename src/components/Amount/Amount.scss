@@ -1,8 +1,8 @@
 @use '../../styles/variables' as v;
 
-.result p {
+.amount {
   color: v.$mainColor;
 }
-.result :first-child {
+.amount-value {
   font-size: 50px;
 }

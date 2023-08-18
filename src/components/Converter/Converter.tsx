@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Converter.scss';
 
 import Header from '../Header/Header';
+import Toggler from '../Toggler/Toggler';
 import Currencies from '../Currencies/Currencies';
 import Amount from '../Amount/Amount';
 import Footer from '../Footer/Footer';
@@ -11,16 +12,13 @@ function Converter() {
   const [isCurrenciesVisible, setIsCurrenciesVisible] = useState(true);
   const [nbClicks, setNbClicks] = useState(0);
 
-  const handleClick = () => {
-    setIsCurrenciesVisible(!isCurrenciesVisible);
-  };
-
   return (
     <div className="Converter">
       <Header amount={nbClicks} />
-      <button className="toggler" type="button" onClick={handleClick}>
-        Hide currencies
-      </button>
+      <Toggler
+        isCurrenciesVisible={isCurrenciesVisible}
+        setIsCurrenciesVisible={setIsCurrenciesVisible}
+      />
       {isCurrenciesVisible && <Currencies currencies={currencies} />}
       <Amount result={1.09} currentCurrency={currencies[0]} />
       <Footer nbClicks={nbClicks} setNbClicks={setNbClicks} />
