@@ -4,6 +4,7 @@ import './Converter.scss';
 import Header from '../Header/Header';
 import Currencies from '../Currencies/Currencies';
 import Amount from '../Amount/Amount';
+import Footer from '../Footer/Footer';
 import currencies from '../../data/currencies';
 
 function Converter() {
@@ -21,6 +22,7 @@ function Converter() {
       </button>
       {isCurrenciesVisible && <Currencies currencies={currencies} />}
       <Amount result={1.09} currentCurrency={currencies[0]} />
+      <Footer />
     </div>
   );
 }
