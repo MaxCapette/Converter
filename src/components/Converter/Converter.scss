@@ -1,7 +1,20 @@
 @use '../../styles/variables' as v;
+@use 'sass:color';
 
 .Converter {
   text-align: center;
+  .toggler {
+    background-color: v.$darkerColor;
+    width: 100%;
+    padding: 1rem;
+    color: v.$lightColor;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: color.scale(v.$darkerColor, $lightness: -20%);
+    }
+  }
 
   &-logo {
     height: 40vmin;
@@ -13,18 +26,18 @@
   }
 
   &-header {
-    background-color: v.$claire;
+    background-color: v.$lightColor;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: v.$principale;
+    color: v.$mainColor;
   }
 
   &-link {
-    color: v.$principale;
+    color: v.$mainColor;
   }
 }
 

@@ -9,8 +9,8 @@
 li {
   animation-duration: 1s;
   list-style: none;
-  color: v.$principale;
-  border-bottom: solid 1px v.$principale;
+  color: v.$mainColor;
+  border-bottom: solid 1px v.$mainColor;
   padding: 5px 10px;
   text-align: left;
   font-size: large;
@@ -20,14 +20,14 @@ ul {
   padding: 0;
 }
 h2 {
-  color: v.$principale;
+  color: v.$mainColor;
   text-align: left;
   padding: 10px;
-  border-bottom: solid 1px v.$principale;
+  border-bottom: solid 1px v.$mainColor;
   font-size: large;
 }
 li:hover {
-  background-color: v.$alternative;
+  background-color: v.$altColor;
   cursor: pointer;
 }
 /* Partie horizontale */
@@ -42,7 +42,7 @@ li:hover {
 
 /* Bouton et zone de défilement */
 ::-webkit-scrollbar-thumb {
-  background-color: v.$principale;
+  background-color: v.$mainColor;
   border-radius: 10px;
   border: 2px solid white; /* espace blanc autour du bouton de défilement */
 }

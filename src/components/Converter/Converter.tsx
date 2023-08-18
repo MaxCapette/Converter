@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './Converter.scss';
 
 import Header from '../Header/Header';
@@ -6,12 +7,19 @@ import Amount from '../Amount/Amount';
 import currencies from '../../data/currencies';
 
 function Converter() {
-  const amount = 1;
+  const [isCurrenciesVisible, setIsCurrenciesVisible] = useState(true);
+
+  const handleClick = () => {
+    setIsCurrenciesVisible(!isCurrenciesVisible);
+  };
 
   return (
     <div className="Converter">
-      <Header amount={amount} />
-      <Currencies currencies={currencies} />
+      <Header amount={1} />
+      <button className="toggler" type="button" onClick={handleClick}>
+        Hide currencies
+      </button>
+      {isCurrenciesVisible && <Currencies currencies={currencies} />}
       <Amount result={1.09} currentCurrency={currencies[0]} />
     </div>
   );

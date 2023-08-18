@@ -1,8 +1,8 @@
 @use '../../styles/variables' as v;
 
 header {
-  background-color: v.$principale;
-  color: v.$claire;
+  background-color: v.$mainColor;
+  color: v.$lightColor;
   padding: 25px;
   span {
     font-size: larger;
