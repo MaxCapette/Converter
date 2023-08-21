@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ICurrency } from '../../@types/converter';
 import './Currencies.scss';
 
 interface ICurrenciesProps {
   currencies: ICurrency[];
-  setCurrentCurrency: React.Dispatch<React.SetStateAction<ICurrency>>;
+  setCurrency: React.Dispatch<React.SetStateAction<ICurrency>>;
 }
-function Currencies({ currencies, setCurrentCurrency }: ICurrenciesProps) {
+function Currencies({ currencies, setCurrency }: ICurrenciesProps) {
   const [search, setSearch] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,8 +18,20 @@ function Currencies({ currencies, setCurrentCurrency }: ICurrenciesProps) {
       currency.description.toLowerCase().includes(search)
     );
   const handleLiClick = (currencyClicked: ICurrency) => {
-    setCurrentCurrency(currencyClicked);
+    setCurrency(currencyClicked);
   };
+
+  // useEffect(
+  //   //callback exécutée apres chaques rendus
+  //   () => {}
+  // );
+  // useEffect(
+  //   //callback exécutée apres le 1er rendu
+  //   () => {},
+  //   //tableau de dépendance
+  //   []
+  // );
+
   return (
     <div className="scrollLi">
       <input

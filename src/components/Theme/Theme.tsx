@@ -1,7 +1,5 @@
 function Theme() {
-  const handleClick = () => {
-    console.log();
-  };
+  const handleClick = () => {};
   return (
     <button type="button" onClick={handleClick} className="theme">
       Theme

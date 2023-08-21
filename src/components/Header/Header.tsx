@@ -5,27 +5,28 @@ import './Header.scss';
 
 interface IHeaderProps {
   amount: number;
-  setNbInput: React.Dispatch<React.SetStateAction<number>>;
+  setAmount: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function Header({ amount, setNbInput }: IHeaderProps) {
+function Header({ amount, setAmount }: IHeaderProps) {
   const [inputError, setInputError] = useState(false);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     const newValue = Number(value);
     if (!Number.isNaN(newValue) || value === '') {
       setInputError(false);
-      setNbInput(newValue);
+      setAmount(newValue);
     } else {
       setInputError(true);
     }
   };
+
   return (
     <header className="header">
       <h1 className="header-title">Converter</h1>
       <input
         type="text"
-        className={inputError ? 'error' : ''}
+        className={inputError ? 'error' : 'input'}
         onChange={handleChange}
         value={amount}
         placeholder="Enter the amount"
