@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import { ICurrency } from '../../@types/converter';
 import './Currencies.scss';
 
 interface ICurrenciesProps {
-  currencies: ICurrency[];
+  list: ICurrency[];
   setCurrency: React.Dispatch<React.SetStateAction<ICurrency>>;
 }
-function Currencies({ currencies, setCurrency }: ICurrenciesProps) {
+function Currencies({ list, setCurrency }: ICurrenciesProps) {
   const [search, setSearch] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,7 +14,7 @@ function Currencies({ currencies, setCurrency }: ICurrenciesProps) {
   };
 
   const getFilteredList = () =>
-    currencies.filter((currency) =>
+    list.filter((currency) =>
       currency.description.toLowerCase().includes(search)
     );
   const handleLiClick = (currencyClicked: ICurrency) => {

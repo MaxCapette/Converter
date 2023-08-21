@@ -8,6 +8,14 @@
     font-size: larger;
   }
   &-title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &-input {
+    width: 2rem;
+    margin-right: 0.5em;
   }
 }
 

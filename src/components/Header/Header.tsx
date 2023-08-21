@@ -24,16 +24,19 @@ function Header({ amount, setAmount }: IHeaderProps) {
   return (
     <header className="header">
       <h1 className="header-title">Converter</h1>
-      <input
-        type="text"
-        className={inputError ? 'error' : 'input'}
-        onChange={handleChange}
-        value={amount}
-        placeholder="Enter the amount"
-      />
-      {inputError && (
-        <div className="error-message">Please enter a valid number.</div>
-      )}
+      <p className="header-amount">
+        <input
+          type="text"
+          className={inputError ? 'error' : 'header-input'}
+          onChange={handleChange}
+          value={amount}
+          placeholder="Enter the amount"
+        />
+        {inputError && (
+          <div className="error-message">Please enter a valid number.</div>
+        )}
+        €
+      </p>
     </header>
   );
 }

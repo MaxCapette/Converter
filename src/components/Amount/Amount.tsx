@@ -3,13 +3,13 @@ import './Amount.scss';
 
 interface IAmountProps {
   result: number;
-  currency: ICurrency;
+  currentCurrency: ICurrency;
 }
-function Amount({ result, currency }: IAmountProps) {
+function Amount({ result, currentCurrency }: IAmountProps) {
   return (
     <section className="amount">
       <p className="amount-value">{result.toFixed(2)}</p>
-      <p className="amount-currency">{currency.description}</p>
+      <p className="amount-currency">{currentCurrency.description}</p>
     </section>
   );
 }
