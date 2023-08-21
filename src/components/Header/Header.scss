@@ -1,6 +1,6 @@
 @use '../../styles/variables' as v;
 
-header {
+.header {
   background-color: v.$mainColor;
   color: v.$lightColor;
   padding: 25px;
@@ -18,6 +18,7 @@ header {
 .error-message {
   color: red;
   font-size: 0.8em;
+  margin: 13px;
 }
 
 /* Animation de vibration */

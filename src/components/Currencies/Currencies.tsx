@@ -17,7 +17,7 @@ function Currencies({ currencies, setCurrentCurrency }: ICurrenciesProps) {
     currencies.filter((currency) =>
       currency.description.toLowerCase().includes(search)
     );
-  const handleClick = (currencyClicked: ICurrency) => {
+  const handleLiClick = (currencyClicked: ICurrency) => {
     setCurrentCurrency(currencyClicked);
   };
   return (
@@ -32,20 +32,20 @@ function Currencies({ currencies, setCurrentCurrency }: ICurrenciesProps) {
       <ul>
         {getFilteredList().map((currency) => {
           return (
-            <div
-              className="currencies-item"
-              key={currency.code}
-              onClick={() => {
-                handleClick(currency);
-              }}
-              onKeyDown={() => {
-                handleClick(currency);
-              }} // Err 1
-              role="button" // Err 2
-              tabIndex={0} // Err 4
-            >
-              {currency.description}
-            </div>
+            <li key={currency.code} className="currencies-item">
+              <div
+                onClick={() => {
+                  handleLiClick(currency);
+                }}
+                onKeyDown={() => {
+                  handleLiClick(currency);
+                }} // Err 1
+                role="button" // Err 2
+                tabIndex={0} // Err 4
+              >
+                {currency.description}
+              </div>
+            </li>
           );
         })}
       </ul>

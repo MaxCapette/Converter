@@ -21,8 +21,8 @@ function Header({ amount, setNbInput }: IHeaderProps) {
     }
   };
   return (
-    <header className="Header">
-      <h1 className="Header-title">Converter</h1>
+    <header className="header">
+      <h1 className="header-title">Converter</h1>
       <input
         type="text"
         className={inputError ? 'error' : ''}
