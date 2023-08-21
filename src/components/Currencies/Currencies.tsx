@@ -4,7 +4,7 @@ import './Currencies.scss';
 
 interface ICurrenciesProps {
   list: ICurrency[];
-  setCurrency: React.Dispatch<React.SetStateAction<ICurrency>>;
+  setCurrency: React.Dispatch<React.SetStateAction<null | ICurrency>>;
 }
 function Currencies({ list, setCurrency }: ICurrenciesProps) {
   const [search, setSearch] = useState('');
@@ -33,7 +33,7 @@ function Currencies({ list, setCurrency }: ICurrenciesProps) {
   // );
 
   return (
-    <div className="scrollLi">
+    <div className="currencies">
       <input
         type="text"
         className="currencies-input"

@@ -1,9 +1,16 @@
 @use '../../styles/variables' as v;
 
-.scrollLi {
+.currencies {
   height: 40vh;
   overflow: scroll;
   overflow-x: hidden;
+  &-input {
+    pad: 1rem;
+    width: 100%;
+    font-weight: bold;
+    color: v.$mainColor;
+    border: solid 1px v.$mainColor;
+  }
 }
 
 .currencies-item {
@@ -30,14 +37,6 @@ h2 {
   padding: 10px;
   border-bottom: solid 1px v.$mainColor;
   font-size: large;
-}
-
-.currencies-input {
-  pad: 1rem;
-  width: 100%;
-  font-weight: bold;
-  color: v.$mainColor;
-  border: solid 1px v.$mainColor;
 }
 
 /* Partie horizontale */

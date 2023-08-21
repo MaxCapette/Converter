@@ -3,18 +3,6 @@
 
 .Converter {
   text-align: center;
-  .toggler {
-    background-color: v.$darkerColor;
-    width: 100%;
-    padding: 1rem;
-    color: v.$lightColor;
-    border: 0;
-    cursor: pointer;
-
-    &:hover {
-      background-color: color.scale(v.$darkerColor, $lightness: -20%);
-    }
-  }
 
   &-logo {
     height: 40vmin;
@@ -38,6 +26,18 @@
 
   &-link {
     color: v.$mainColor;
+  }
+}
+.toggler {
+  background-color: v.$darkerColor;
+  width: 100%;
+  padding: 1rem;
+  color: v.$lightColor;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color.scale(v.$darkerColor, $lightness: -20%);
   }
 }
 
