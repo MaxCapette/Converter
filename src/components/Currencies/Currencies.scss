@@ -11,19 +11,19 @@
     color: v.$mainColor;
     border: solid 1px v.$mainColor;
   }
-}
+  &-item {
+    animation-duration: 1s;
+    list-style: none;
+    color: v.$mainColor;
+    border-bottom: 1px solid v.$mainColor;
+    padding: 5px 10px;
+    text-align: left;
+    font-size: large;
 
-.currencies-item {
-  animation-duration: 1s;
-  list-style: none;
-  color: v.$mainColor;
-  border-bottom: solid 1px v.$mainColor;
-  padding: 5px 10px;
-  text-align: left;
-  font-size: large;
-  &:hover {
-    background-color: v.$altColor;
-    cursor: pointer;
+    &:hover {
+      background-color: v.$altColor;
+      cursor: pointer;
+    }
   }
 }
 

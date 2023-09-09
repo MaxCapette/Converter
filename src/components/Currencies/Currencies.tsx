@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ICurrency } from '../../@types/converter';
 import './Currencies.scss';
 

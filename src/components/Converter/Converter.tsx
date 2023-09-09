@@ -7,7 +7,6 @@ import Toggler from '../Toggler/Toggler';
 import Currencies from '../Currencies/Currencies';
 import Amount from '../Amount/Amount';
 import Footer from '../Footer/Footer';
-import currenciesData from '../../data/currencies';
 import { ICurrency } from '../../@types/converter';
 
 function Converter() {
@@ -17,6 +16,7 @@ function Converter() {
   const [currencies, setCurrencies] = useState([]);
   const [currency, setCurrency] = useState<null | ICurrency>(null);
   const [total, setTotal] = useState(0);
+  // eslint-disable-next-line
   const [currentTheme, setCurrentTheme] = useState();
 
   useEffect(
